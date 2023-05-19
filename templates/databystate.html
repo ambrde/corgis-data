@@ -1,0 +1,23 @@
+{% extends "datalayout.html" %}
+
+{% set active_page = "databystate" %}
+
+{% block title %}Data by State{% endblock %}
+
+{% block heading %}Data by State{% endblock %}
+
+{% block body %}
+
+<h2>Select a state</h2>
+<p>Data is not available for the following states because, as of September 2021, these states have no wind turbines: 
+   Alabama (AL), Arkansas (AR), Florida (FL), Georgia (GA), Kentucky (KY), Louisiana (LA), Mississippi (MS), South Carolina (SC).</p>
+<p>Data is available for all other states, plus Puerto Rico (PR) and Guam (GU).</p>
+<form action="/databystate">
+	<select name="state">
+		{{ options }}
+	</select>
+	<br><br>
+	<input type="submit">
+</form>
+
+{% endblock %}

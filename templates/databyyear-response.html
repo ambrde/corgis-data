@@ -1,0 +1,12 @@
+{% extends "databyyear.html" %}
+
+{% block body %}
+{{ super() }} <!-- this is like a copy and paste of everything on the linked page (databyyear.html) -->
+
+<h2>{{ year }}</h2>
+<p>There were <b>{{ totalnum }}</b> turbines that began operating in {{ year }}!</p>
+<p class="info">To find the location, capacity, and more info about turbines built in this year, 
+				visit the <a href="https://eerscmap.usgs.gov/uswtdb/viewer/#3/37.25/-96.25" target="_blank">USWTDB viewer</a>, 
+				select "Apply Range Filter to Turbines by: Year" in the sidebar, and adjust the slider to your desired year!
+</p>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "databystate.html" %}
+
+{% block body %}
+{{ super() }} <!-- this is like a copy and paste of everything on the linked page (databystate.html) -->
+
+<h2>Wind Energy in {{ fullname }}</h2>
+<p><b>Total Number of Wind Turbines:</b> {{ turbs }}</p>
+<p><b>Total Electrical Generation Capacity (in megawatts):</b> {{ cap }} MW</p>
+<p>For context, {{ cap }} MW could power about {{ homes }} homes for one year!</p>
+<p class="info">How did we get this calculation? See <a href="https://greenportfolio.com/blog/megawatt-solar-energy-wind-power/" target="_blank">this source</a>!</p>
+<br>
+<p>Find more resources on wind energy in {{ fullname }} <a href="https://windexchange.energy.gov/states/{{ state }}" target="_blank">here</a>!</p>
+
+{% endblock %}

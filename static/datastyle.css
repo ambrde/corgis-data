@@ -1,0 +1,65 @@
+body{
+	font-family: "Segoe UI Regular", "Verdana", sans-serif;
+	font-size: 1.65em;
+}
+
+#content{
+	margin: 25px;
+}
+
+p{
+	line-height: 1.5;
+}
+
+.info{
+	font-size: 0.90em;
+	margin-left: 25px;
+	border-left: 3px solid gray;
+	padding-left: 7px;
+	color: gray;
+}
+
+.linkbtn:link{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	margin: 15px 0px 15px 0px;
+	background-color: gainsboro;
+	border-radius: 5px;
+	color: darkslategray;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.linkbtn:visited{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	margin: 15px 0px 15px 0px;
+	background-color: gainsboro;
+	border-radius: 5px;
+	color: darkslategray;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.linkbtn:hover{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	margin: 15px 0px 15px 0px;
+	background-color: lightgray;
+	border-radius: 5px;
+	color: black;
+	padding: 5px;
+	text-decoration: none;
+}
+
+input[type=submit] {
+	display: inline-block;
+	background-color: gainsboro;
+	border: none;
+	border-radius: 5px;
+	color: darkslategray;
+	padding: 5px 9px 5px 9px;
+}

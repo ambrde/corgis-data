@@ -1,0 +1,24 @@
+{% extends "datalayout.html" %}
+
+{% set active_page = "databyyear" %}
+
+{% block title %}Data by Year{% endblock %}
+
+{% block heading %}Data by Year{% endblock %}
+
+{% block body %}
+
+<h2>Select a Year</h2>
+<br>
+<p class="info">Did you know? The first wind turbine in the US was built in 1888 by an inventor in Ohio! However, this database only contains turbines from
+				1983-2021 that were still operating as of September 2021.</p>
+<br>
+<form action="/databyyear">
+	<select name="year">
+		{{ yoptions }}
+	</select>
+	<br><br>
+	<input type="submit">
+</form>
+
+{% endblock %}

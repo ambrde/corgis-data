@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Latest compiled and minified bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+		<!-- link to jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+		<link rel="stylesheet" href="{{url_for('static',filename='datastyle.css')}}" type="text/css">
+    
+		<title>Wind Turbine Data - {% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand">
+						<img src="/static/turbine.gif" alt="turbine clipart" style="width:40px;" class="rounded-pill">
+					<a class="navbar-brand">US Wind Turbine Data</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li {% if active_page == "about" %} class="active"{% endif %}><a href="/">About the Data</a></li>
+					<li {% if active_page == "databystate" %} class="active"{% endif %}><a href="databystate">Data by State</a></li>
+					<li {% if active_page == "databyyear" %} class="active"{% endif %}><a href="databyyear">Data by Year</a></li>
+				</ul>
+		  </div>
+		</nav>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+		<div id="content">
+			<h1>{% block heading %}{% endblock %}</h1>
+			{% block body %}{% endblock %}
+		</div>
+		
+	</body>
+</html>

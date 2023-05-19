@@ -1,0 +1,24 @@
+{% extends "datalayout.html" %}
+
+{% set active_page = "about" %}
+
+{% block title %}About the Data{% endblock %}
+
+{% block heading %}About the Wind Turbine Data{% endblock %}
+
+{% block body %}
+	<p>This website allows you to explore data on wind turbines in the US. You can do so in two ways:</p>
+	<a href="/databystate" class="linkbtn">Explore the Data by State</a>
+	<a href="/databyyear" class="linkbtn">Explore the Data by Year</a>
+	<br><br>
+	<p>Under "Data by State", you can see the total number of wind turbines and their capacity in your selected state, as well as additional resources on wind energy in that state.
+		Under "Data by Year", you can see the total number of wind turbines that began operating in your selected year.</p>
+	<p>The data used on this website is from the CORGIS dataset, which can be found 
+		<a href="https://think.cs.vt.edu/corgis/json/wind_turbines/" target="_blank">here</a>. 
+		The data is collected from the 
+		<a href="https://www.sciencebase.gov/catalog/item/57bdfd8fe4b03fd6b7df5ff9" target="_blank">United States Wind Turbine Database</a> (USWTD). 
+		There is data on each individual wind turbine in the US--its location, height, electrical generation capacity, and more.</p>
+	<p>Check out this <a href="https://eerscmap.usgs.gov/uswtdb/viewer/#3/37.25/-96.25" target="_blank">viewer</a> from USWTD to explore some more!</p>
+	
+
+{% endblock %}

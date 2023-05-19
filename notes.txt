@@ -1,0 +1,24 @@
+/make a data by year page?
+	earliest year any turbines were built = 1983
+	user selects a year, shows total number of turbines built that year, maybe their location? or total capacity?
+
+/add context for how much power x amount of megawatts is ("x megawatts could power y homes for z years!" or something similar
+	****https://greenportfolio.com/blog/megawatt-solar-energy-wind-power/ **** use this source!
+		assuming low avergae wind speeds, one MW of wind energy would produce ~1450 MWh 
+			powers 187 homes for a year!
+			1 MW = 187 homes -> x MW =  187x homes
+			
+			average home consumes about 10.65 MWh per year (greenportfolio source and linked https://www.eia.gov/tools/faqs/faq.php?id=97&t=3)
+			if one MW would produce ~1450MWh, that is only 136 homes powered, not 187?
+				-changed factor to 136 for now
+
+add when the first and/or most recent turbines were built for the selected state,
+	**or add a fun wind-energy-related fact about the chosen state?**
+		
+/add a button to the home page that takes the user to the form page 
+
+style
+
+add full state names-- downloaded json file already (state_abbrs.json), wrote some code but not sure if its useful:
+	with open("state_abbrs.json") as state_abbrs:
+        stnames = json.load(state_abbrs)
